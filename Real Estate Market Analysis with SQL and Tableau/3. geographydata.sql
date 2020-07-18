@@ -1,4 +1,4 @@
-----QUESTION 4B - Part 3----
+----HANDLE GEOGRAPHY DATA----
 
 
 
@@ -10,7 +10,7 @@ GO
 
 
 
---Create a geography field from ìlatitudeî and ìlongitudeî geometry field
+--Create a geography field from ‚Äúlatitude‚Äù and ‚Äúlongitude‚Äù geometry field
 
 ALTER TABLE Student_FS2020.[UM-AD\ptd9pk].SacRealEstate
 ADD GeoLocation GEOGRAPHY
