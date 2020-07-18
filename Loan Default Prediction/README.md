@@ -56,24 +56,34 @@ Risk | The risk associated with the borrower	| Binary
 ### 1. Data cleaning
 * Handle user input errors in column names and data types
 * Handle missing values using 3 methods
-####	Alternative #1: Discard incomplete rows
-####	Alternative #2: Discard variable containing more than 10% missing values and substitute remaining missing values with the median of that variable
-####	Alternative #3: Discard variable containing more than 10% missing values and substitute remaining missing values with the median of that variable; afterthat, oversampling to deal with imbalanced dataset
+####	Alternative #1: Discard incomplete rows, resulting in LoanData1 dataset
+####	Alternative #2: Discard variable containing more than 10% missing values and substitute remaining missing values with the median of that variable, resulting in LoanData2 dataset
+####	Alternative #3: Discard variable containing more than 10% missing values and substitute remaining missing values with the median of that variable; afterthat, oversample to result in LoanData3 dataset
 
-Resulting data map:
+Why oversampling?
 
-<img src="photos/data-map.jpg" width=500>
+The LoanData2 dataset has extremely imbalanced dependent variable with 93% classified as “high risk” (coded 0). 
 
-### 2. Data analysis and syntax examples
+<img src="photos/imbalanced-data.png" width=300>
 
-*	Calculate Average Sales Price of homes for each Zip Code
-* Find 10 Zip Codes having the highest Ratio of Average Home Price to Median Household Income
+With this situation, the machine learning algorithm can classify all the rows as 0 (without learning any useful information) and still get an accuracy rate at 93%. To overcome this drawback of imbalanced dataset, I will employ oversampling method, using SMOTE - Synthetic Minority Oversampling Technique, to increase the number 1 in the ‘Risk’ column to achieve a 1:5 ratio – For every 1 high risk, there will be 5 low risk.
 
-<img src="photos/zipcode-highest-ratio.jpg" width=700>
 
-* Find the customers living within 20-mile radius of the Real Estate Office
+### 2. Splitting data into Training and Testing datasets
 
-<img src="photos/within-20miles.jpg" width=700>
+
+Each datasets is split into training and testing datasets with the 7:3 ratio – 70% training data and 30% testing data.
+LoanData1 --> X_train1, X_test1, y_train1, y_test1
+LoanData2 --> X_train2, X_test2, y_train2, y_test2
+LoanData3 --> X_train3, X_test3, y_train3, y_test3
+
+
+### 3. Learning from datasets and making Predictions
+
+In order to solve a problem having binary dependent variable, I use 2 following methods:
+
+*	Random Forest Classifier
+* Multi-Layer Perceptron (MLP) Classifier
 
 
 ## Data visualization
