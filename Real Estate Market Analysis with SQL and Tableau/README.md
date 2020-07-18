@@ -35,6 +35,25 @@ Because of the high potential of this market, ABCD Real Estate Co. has faced wit
 ## Dataset description
 <img src="photos/dataset_description.jpg" width=600>
 
+Table Name | Variable Name | Description | Type
+--- | --- | --- | ---
+SacRealEstate	| street	| Street address of the house	| Varchar (50)
+ | city	| City where the house is	| Varchar (50)
+ | zip	| Zip code of the house location	| Varchar (50)
+ | state	| State where the house is	| Varchar (50)
+ | beds	| Number of beds in the house	| Varchar (50)
+ | baths	| Number of baths in the house | Varchar (50)
+ | sq__ft	| Square feet of the house	| Varchar (50)
+ | type	| Type of the house	| Varchar (50)
+ | sale date	| The date the house was sold	| Varchar (50)
+ | price	| Sale price of the house	| Varchar (50)
+ | latitude	| Geographic location of the house, y_coordinate	| Varchar (50)
+ | longitude | Geographic location of the house, x_coordinate	| Varchar (50)
+HHIncome	| Zip | Zip code in the United States	Varchar (50)
+ | Median | Median household income in the zip code	Varchar (50)
+ | Mean Mean household income in the zip code	Varchar (50)
+ | Pop | Total population in the zip code	Varchar (50)
+
 
 ## Data preparation and analysis steps
 
