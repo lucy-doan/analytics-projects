@@ -42,27 +42,27 @@ Because of the high potential of this market, ABCD Real Estate Co. has faced wit
 * Load 2 datasets into SQL Server using SQL Server Import and Export Wizard
 * Convert data type, handling data errors and creating new calculated columns
 * Design data schema
-<img src="Real Estate Market Analysis with SQL and Tableau/photos/design-data-schema.jpg" width=700>
+<img src="photos/design-data-schema.jpg" width=700>
 
 Resulting data map:
 
-<img src="Real Estate Market Analysis with SQL and Tableau/photos/data-map.jpg" width=500>
+<img src="photos/data-map.jpg" width=500>
 
 ### 2. Data analysis and syntax examples
 
 *	Calculate Average Sales Price of homes for each Zip Code
 * Find 10 Zip Codes having the highest Ratio of Average Home Price to Median Household Income
 
-<img src="Real Estate Market Analysis with SQL and Tableau/photos/zipcode-highest-ratio.jpg" width=700>
+<img src="photos/zipcode-highest-ratio.jpg" width=700>
 
 * Find the customers living within 20-mile radius of the Real Estate Office
 
-<img src="Real Estate Market Analysis with SQL and Tableau/photos/within-20miles.jpg" width=700>
+<img src="photos/within-20miles.jpg" width=700>
 
 
 ## Data visualization
 
-<img src="Real Estate Market Analysis with SQL and Tableau/photos/dataviz.jpg" width=700>
+<img src="photos/dataviz.jpg" width=700>
 
 
 ## Conclusion
