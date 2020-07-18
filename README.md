@@ -41,8 +41,8 @@ Feel free to contact me if you want to share your thoughts on my projects, or si
 
 > [@LinkedIn](https://www.linkedin.com/in/lucy-phuong-doan/)
 
-> [@Blog](https://lucyplayingdata.wordpress.com/blog/)
+> [@Blog (Portfolio)](https://lucyplayingdata.wordpress.com/blog/)
 
-> [@Tableau-profile](https://public.tableau.com/profile/lucy.phuong.doan/)
+> [@Tableau Profile](https://public.tableau.com/profile/lucy.phuong.doan/)
 
 > [@Facebook](https://www.facebook.com/lucyphuongdoan/)
