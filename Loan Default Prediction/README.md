@@ -149,22 +149,23 @@ Overall, Random Forest model on LoanData3 could be regarded as the best because 
 
 ## Variable Importance Plot
 
-<img src="photos/Importance-plot-1.jpg" width=350> <img src="photos/Importance-plot-2.jpg" width=350> <img src="photos/Importance-plot-3.jpg" width=350>
+<img src="photos/Importance-plot-1.jpg" width=450> <img src="photos/Importance-plot-2.jpg" width=450> <img src="photos/Importance-plot-3.jpg" width=450>
 
 Top 3 most important variables of LoanData2 and LoanData3 are the same while they are totally different from those from LoanData1. 
 A possible reason is that 2 out of 3 most important variables in LoanData1, Income and Debt Ratio, are already removed from the other two datasets. Besides, Age and Utilization, which is the ratio of total balance on lines of credit to the total credit limits, are not most importance in LoanData2 and LoanData3 dataset while both rank top in LoanData1. In my opinion, the reason could be all 4 variables, Income, Debt Ratio, Age and Utilization are correlated to each other. 
 
 ## Conclusion
 
+* Most of the performance metrics prove that LoanData2 and LoanData3 datasets have more advantages than LoanData1 because they do not remove the rows having missing values, thus not losing important characteristics. Especially, the data sample 3 reduces the classification imbalance in predicting variable, by oversampling, resulting in better performance than the other two samples. 
 * Overall, Random Forest model on LoanData3 has the highest precision, recall and f-1 scores. What makes difference between the samples 2-3 and sample 1 is they keep the rows having missing values. By discarding the rows of missing values, sample 1 (LoanData1 dataset) could lose some importance characteristics presented in these rows
 * Random Forest Classifier performs much better than MLP Classifier in almost all of the performance measurements, except for specificity. This is reasonable because when doing “trial-and-error” to select hidden layer’s number and node’s numbers, only LoanData1 dataset was used
-
+* LoanData1 gives more weights on borrower’s demographical information, age and income, while LoanData2 and LoanData3 focus more on borrower’s behaviors of using credits. 
 
 ## Recommendation
 
-- To avoid loan default risk: by targeting the customers who are capable of buying its homes and only approve the applicants having low risks of mortgage loan default 
-- To have a comprehensive market segmentation: by collecting customer’s financial health, such as credit score, individual and household incomes
-- To identify key products: by collecting  KPIs of homes purchased, such as home purchase price,  gross income, operating expenses, vacancy rate
+* The data preparation method applied on sample 3 could be considered for other analysis on datasets with similar domain or features
+* Although Random Forest Classifier models produce better performance metrics, do use them with cautions
+* In future, we may consider to raise the bar, e.g. only discarding variables having more than 20-25% missing values, in order to avoid losing major contributing factors. Also, we may consider to add other factors in future research such as the stability of employment and characters and reputation of credit applicants
 
 
 ## Contact
