@@ -62,7 +62,7 @@ Resulting data map:
 
 ## Data visualization
 
-<img src="photos/dataviz.jpg" width=700>
+<img src="photos/dataviz.jpg" width=900>
 
 
 ## Conclusion
