@@ -31,21 +31,34 @@ Nowadays, many banks invest largely into risk management or credit appraisal to 
 
 ## Raw data
 
-* 1st dataset: SacRealEstate, containing 986 records of the past transactions conducted in 2008, with information about house address (street, city, zip, geographic location), house information (number of beds, number of baths, square feet, type) and transaction details (sales date, price). 
-* 2nd dataset: HHIncome, containing median and mean household income of 32,634 zip codes in the US during the 2006-2010 period. 
+The data used in this project is a real-world dataset obtained from a bank in the US, containing 100,000 samples. 
 
 
 ## Dataset description
-<img src="photos/dataset_description.jpg" width=600>
+
+Variable Name | Description | Type
+--- | --- | ---
+Age	| Age of the borrower (in years)	Integer
+Debt Ratio | The ratio of monthly debt payments to monthly gross income	| Continuous between 0 and 1
+LOC	| Number of open loans and lines of credit | Integer
+Income | Monthly income of the borrower	| Continuous
+MREL | Number of mortgage and real estate loans | Integer
+Dependents | Number of dependents of the borrower	| Integer
+Utilization	| The ratio of total balance on lines of credit to the total credit limits | Continuous between 0 and 1
+30Day	| Number of times the borrower has been 30-59 days past the due date in the last two years | Integer 
+60Day	| Number of times the borrower has been 60-89 days past the due date in the last two years | Integer 
+90Day	| Number of times the borrower has been equal to or more than 90 days past the due date | Integer 
+Risk | The risk associated with the borrower	| Binary 
 
 
 ## Data preparation and analysis steps
 
-### 1. Data preparation
-* Load 2 datasets into SQL Server using SQL Server Import and Export Wizard
-* Convert data type, handling data errors and creating new calculated columns
-* Design data schema
-<img src="photos/design-data-schema.jpg" width=700>
+### 1. Data cleaning
+* Handle user input errors in column names and data types
+* Handle missing values using 3 methods
+####	Alternative #1: Discard incomplete rows
+####	Alternative #2: Discard variable containing more than 10% missing values and substitute remaining missing values with the median of that variable
+####	Alternative #3: Discard variable containing more than 10% missing values and substitute remaining missing values with the median of that variable; afterthat, oversampling to deal with imbalanced dataset
 
 Resulting data map:
 
