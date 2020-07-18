@@ -1,7 +1,4 @@
-----Question 3----
-
-
---Designing Data Schema
+--Designing Data Schema--
 
 
 SELECT *
