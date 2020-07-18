@@ -33,7 +33,7 @@ Because of the high potential of this market, ABCD Real Estate Co. has faced wit
 
 
 ## Dataset description
-<img src="Real Estate Market Analysis with SQL and Tableau/photos/dataset_description.jpg" width=600>
+<img src="photos/dataset_description.jpg" width=600>
 
 
 ## Data preparation and analysis steps
