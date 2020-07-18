@@ -62,7 +62,10 @@ Resulting data map:
 
 ## Data visualization
 
-<img src="photos/dataviz.jpg" width=900>
+Interactive Tableau dashboard:
+https://tabsoft.co/2OCUB1G
+
+<img src="photos/dataviz.jpg" width=800>
 
 
 ## Conclusion
