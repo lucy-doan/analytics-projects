@@ -132,12 +132,23 @@ MLP1_class = MLP1_class.fit(X_train1, y_train1)
 #Do the same for the other 2 datasets
 ```
 
-## Data visualization
 
-Interactive Tableau dashboard:
-https://tabsoft.co/2OCUB1G
+## Model evaluation
 
-<img src="photos/dataviz.jpg" width=800>
+For convenient comparison, we gather all performance measurements of 3 approaches (technique i, technique ii or technique ii + SMOTE) and 2 algorithms. This is a crosstab with 6 columns, RF1, RF2, RF3, MLP1, MLP2, MLP3, and 4 rows of measurements.
+
+RF1 | RF2	| RF3	| MLP1 | MLP2	| MLP3
+--- | --- | --- | --- | --- | ---
+precision	| 0.761509 | 0.678089	| 0.777438 | 0.505091	| 0.032667 | 0.084675
+recall | 0.561976	0.595423 | 0.701694 | 0.500112 | 0.500000 | 0.500000
+f1-score | 0.590857	| 0.620986 | 0.729249 | 0.485359 | 0.061327 | 0.144824
+accuracy | 0.940870	| 0.928533 | 0.867669 | 0.937653 | 0.065333 | 0.169350
+specificity	| 0.130178 | 0.212245	| 0.450712 | 0.001479	| 1.000000 | 1.000000
+
+
+## Variable Importance Plot
+
+<img src="photos/importance-plot-1.jpg" width=300> <img src="photos/importance-plot-2.jpg" width=300>
 
 
 ## Conclusion
