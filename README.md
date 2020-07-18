@@ -35,7 +35,7 @@ Associated with the report document is an Excel spreadsheet containing raw data 
 
 Feel free to contact me if you want to share your thoughts on my projects, or simply just want to connect :-)
 
-# Connecting is Caring
+# Connecting is Caring :cherry_blossom::cherry_blossom::cherry_blossom:
 
 > [@Email](mphuong.ibeftu@gmail.com)
 
