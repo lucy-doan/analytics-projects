@@ -66,7 +66,7 @@ The LoanData2 dataset has extremely imbalanced dependent variable with 93% class
 
 <img src="photos/imbalanced-data.png" width=300>
 
-With this situation, the machine learning algorithm can classify all the rows as 0 (without learning any useful information) and still get an accuracy rate at 93%. To overcome this drawback of imbalanced dataset, I will employ oversampling method, using SMOTE - Synthetic Minority Oversampling Technique, to increase the number 1 in the ‘Risk’ column to achieve a 1:5 ratio – For every 1 high risk, there will be 5 low risk.
+With this situation, the machine learning algorithm can classify all the rows as 0 (without learning any useful information) and still get an accuracy rate at 93%. To overcome this drawback of imbalanced dataset, I will employ oversampling method, using SMOTE - Synthetic Minority Oversampling Technique, to increase the high-risk case to achieve a 1:5 ratio – For every 1 high risk, there will be 5 low risk.
 
 ```python
 #Upsampling, using SMOTE library, by increasing the minority class (1 - high risk)
@@ -90,8 +90,47 @@ LoanData3 --> X_train3, X_test3, y_train3, y_test3
 In order to solve a problem having binary dependent variable, I use 2 following methods:
 
 *	Random Forest Classifier
+
+```python
+#Initialize the Random Forest Classifier and let the model learn from the LoanData1 dataset
+RF1_class = RandomForestClassifier(n_estimators=50)
+RF1_class = RF1_class.fit(X_train1, y_train1)
+
+#Do the same for the other 2 datasets
+```
+
 * Multi-Layer Perceptron (MLP) Classifier
 
+```python
+#Determine number of hidden layers and number of hidden nodes in each layer, based on Accuracy Score, using LoanData1
+df = pd.DataFrame(columns=["firstLayer_N","2ndLayer_0N","2ndLayer_1N","2ndLayer_2N","2ndLayer_3N","2ndLayer_4N"
+                           ,"2ndLayer_5N"])
+
+for i in range(7):           #i is the number of nodes in second hidden layer
+    for j in range(1,21):    #j is the number of nodes in first hidden layer
+        if i == 0:
+            df[df.columns[i]] = range(1,21)
+        elif i == 1:
+            MLP1_class = MLPClassifier(hidden_layer_sizes=(j), solver='lbfgs', alpha=1e-05, random_state=8810
+                                       , max_iter=500).fit(X_train1, y_train1)
+            y_pred_MLP1 = MLP1_class.predict(X_test1)
+            Accuracy_MLP1 = metrics.accuracy_score(y_test1, y_pred_MLP1)
+            df[df.columns[i]][j-1] = Accuracy_MLP1
+        else:
+            MLP1_class = MLPClassifier(hidden_layer_sizes=(j,i), solver='lbfgs', alpha=1e-05, random_state=8810
+                                       , max_iter=500).fit(X_train1, y_train1)
+            y_pred_MLP1 = MLP1_class.predict(X_test1)
+            Accuracy_MLP1 = metrics.accuracy_score(y_test1, y_pred_MLP1)
+            df[df.columns[i]][j-1] = Accuracy_MLP1
+```
+
+```python
+#Train the LoanData1 dataset with the MLP Classifier
+MLP1_class = MLPClassifier(hidden_layer_sizes=(5,2), solver='lbfgs', alpha=1e-05, random_state=8810, max_iter=500)
+MLP1_class = MLP1_class.fit(X_train1, y_train1)
+
+#Do the same for the other 2 datasets
+```
 
 ## Data visualization
 
