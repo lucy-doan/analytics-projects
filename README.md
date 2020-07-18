@@ -38,9 +38,9 @@ Feel free to contact me if you want to share your thoughts on my projects, or si
 ## Connecting is Caring
 
 > [@Email](mphuong.ibeftu@gmail.com)
-[@LinkedIn](https://www.linkedin.com/in/lucy-phuong-doan/)
+> [@LinkedIn](https://www.linkedin.com/in/lucy-phuong-doan/)
 
-[@Blog](https://lucyplayingdata.wordpress.com/blog/)
-[@Tableau-profile](https://public.tableau.com/profile/lucy.phuong.doan/)
+> [@Blog](https://lucyplayingdata.wordpress.com/blog/)
+> [@Tableau-profile](https://public.tableau.com/profile/lucy.phuong.doan/)
 
-[@Facebook](https://www.facebook.com/lucyphuongdoan/)
+> [@Facebook](https://www.facebook.com/lucyphuongdoan/)
