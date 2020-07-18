@@ -145,17 +145,19 @@ f1-score | 0.590857	| 0.620986 | 0.729249 | 0.485359 | 0.061327 | 0.144824
 accuracy | 0.940870	| 0.928533 | 0.867669 | 0.937653 | 0.065333 | 0.169350
 specificity	| 0.130178 | 0.212245	| 0.450712 | 0.001479	| 1.000000 | 1.000000
 
+Overall, Random Forest model on LoanData3 could be regarded as the best because it results in highest precision, recall and f-1 scores, while its accuracy score follows very closely to the first and second ranks. 
 
 ## Variable Importance Plot
 
-<img src="photos/importance-plot-1.jpg" width=300> <img src="photos/importance-plot-2.jpg" width=300>
+<img src="photos/Importance-plot-1.jpg" width=350> <img src="photos/Importance-plot-2.jpg" width=350> <img src="photos/Importance-plot-3.jpg" width=350>
 
+Top 3 most important variables of LoanData2 and LoanData3 are the same while they are totally different from those from LoanData1. 
+A possible reason is that 2 out of 3 most important variables in LoanData1, Income and Debt Ratio, are already removed from the other two datasets. Besides, Age and Utilization, which is the ratio of total balance on lines of credit to the total credit limits, are not most importance in LoanData2 and LoanData3 dataset while both rank top in LoanData1. In my opinion, the reason could be all 4 variables, Income, Debt Ratio, Age and Utilization are correlated to each other. 
 
 ## Conclusion
 
-* Market segmentation: there's a big discrepancy in consumer’s needs; Some homes price $400,000, some price less than $100,000
-* Loan default risk: some areas have crazily high ratio of home price to household median income, e.g. 14.7, mainly due to too low median household income
-* Sales territory: almost 80% of customers live within 20 miles from the company's office
+* Overall, Random Forest model on LoanData3 has the highest precision, recall and f-1 scores. What makes difference between the samples 2-3 and sample 1 is they keep the rows having missing values. By discarding the rows of missing values, sample 1 (LoanData1 dataset) could lose some importance characteristics presented in these rows
+* Random Forest Classifier performs much better than MLP Classifier in almost all of the performance measurements, except for specificity. This is reasonable because when doing “trial-and-error” to select hidden layer’s number and node’s numbers, only LoanData1 dataset was used
 
 
 ## Recommendation
