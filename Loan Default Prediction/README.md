@@ -68,7 +68,7 @@ The LoanData2 dataset has extremely imbalanced dependent variable with 93% class
 
 With this situation, the machine learning algorithm can classify all the rows as 0 (without learning any useful information) and still get an accuracy rate at 93%. To overcome this drawback of imbalanced dataset, I will employ oversampling method, using SMOTE - Synthetic Minority Oversampling Technique, to increase the number 1 in the ‘Risk’ column to achieve a 1:5 ratio – For every 1 high risk, there will be 5 low risk.
 
-```
+```python
 #Upsampling, using SMOTE library, by increasing the minority class (1 - high risk)
 X = pd.DataFrame(LoanData2.iloc[:,:-1])
 y = pd.DataFrame(LoanData2.iloc[:,-1])
