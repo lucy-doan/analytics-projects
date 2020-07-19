@@ -53,6 +53,22 @@ Resulting data map:
 *	Calculate Average Sales Price of homes for each Zip Code
 * Find 10 Zip Codes having the highest Ratio of Average Home Price to Median Household Income
 
+```
+--<B> Zip Code with Highest Ratio of Average Home's Price to Household Median Income
+
+SELECT TOP 10 Avg_HomePrice.zip, Avg_SalesPrice_PerZip, 
+			Median AS Median_HHIncome_PerZip,
+			ROUND((Avg_SalesPrice_PerZip * 1.0 /Median),2) AS Ratio
+FROM (
+	SELECT zip, AVG(price) AS Avg_SalesPrice_PerZip
+	FROM Student_FS2020.[UM-AD\ptd9pk].SacRealEstate
+	GROUP BY zip
+	) AS Avg_HomePrice
+INNER JOIN Student_FS2020.[UM-AD\ptd9pk].HHIncome AS Median_HHIncome
+ON Avg_HomePrice.zip = Median_HHIncome.Zip
+ORDER BY Ratio DESC
+```
+
 <img src="photos/zipcode-highest-ratio.jpg" width=700>
 
 * Find the customers living within 20-mile radius of the Real Estate Office
