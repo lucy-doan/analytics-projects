@@ -50,7 +50,7 @@ Resulting data map:
 
 ### 2. Data analysis and syntax examples
 
-*	Calculate Average Sales Price of homes for each Zip Code
+* Calculate Average Sales Price of homes for each Zip Code
 * Find 10 Zip Codes having the highest Ratio of Average Home Price to Median Household Income
 
 ```
@@ -69,11 +69,7 @@ ON Avg_HomePrice.zip = Median_HHIncome.Zip
 ORDER BY Ratio DESC
 ```
 
-<img src="photos/zipcode-highest-ratio.jpg" width=700>
-
 * Find the customers living within 20-mile radius of the Real Estate Office
-
-<img src="photos/within-20miles.jpg" width=700>
 
 ```
 --<C> Count all the places within 20 miles from the Real Estate Office
