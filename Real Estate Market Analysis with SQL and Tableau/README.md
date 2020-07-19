@@ -54,11 +54,11 @@ Resulting data map:
 * Find 10 Zip Codes having the highest Ratio of Average Home Price to Median Household Income
 
 ```
---<B> Zip Code with Highest Ratio of Average Home's Price to Household Median Income
+--<B> 10 Zip Codes with Highest Ratio of Avg. Home's Price to Household Median Income
 
 SELECT TOP 10 Avg_HomePrice.zip, Avg_SalesPrice_PerZip, 
 			Median AS Median_HHIncome_PerZip,
-			ROUND((Avg_SalesPrice_PerZip * 1.0 /Median),2) AS Ratio
+(Avg_SalesPrice_PerZip/Median) AS Ratio
 FROM (
 	SELECT zip, AVG(price) AS Avg_SalesPrice_PerZip
 	FROM Student_FS2020.[UM-AD\ptd9pk].SacRealEstate
@@ -74,6 +74,26 @@ ORDER BY Ratio DESC
 * Find the customers living within 20-mile radius of the Real Estate Office
 
 <img src="photos/within-20miles.jpg" width=700>
+
+```
+--<C> Count all the places within 20 miles from the Real Estate Office
+
+--First, calculate distance from each place to the Real Estate Company's address 
+---(1315 10TH ST, SACRAMENTO, CA, 95814)
+--The Real Estate Company's geometry coordinates are X: -121.494995, Y: 38.576763
+
+SELECT SUM (Count_Within20Miles) AS Count_20Miles_FromOffice
+FROM (
+	SELECT *, CASE WHEN Distance_Miles <= 20 THEN '1' ELSE 0 END 
+AS Count_Within20Miles
+	FROM (
+		SELECT *, 
+			GeoLocation.STDistance(geography::STGeomFromText('POINT
+(-121.494995 38.576763)', 4326)) *0.000621371 AS Distance_Miles
+		FROM Student_FS2020.[UM-AD\ptd9pk].SacRealEstate
+		) AS distance
+	) AS within20Miles
+```
 
 
 ## Data visualization
