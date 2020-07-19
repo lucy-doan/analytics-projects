@@ -2,7 +2,7 @@
 
 > Inspired by the meaning of my name (Lucy) – Light, I am passionate about figuring out hidden insights and bringing them to light.
 
-# Who I Am
+# What I Am Doing
 
 > I have almost 4 years working in the intersection of data analytics, sales operations-strategy, and quantitative consumer research.
 I like solving analytical problems related to market segmentation, forecasting/prediction, pricing, enhancing customer/user experience, supply chain design, by using statistical/ machine learning techniques such as clustering, random forest, neural network, hypothesis testing, NLP, integer programming, and data analytics & visualization tools e.g. Python, R, SQL, SAS, SPSS, Excel Analysis ToolPak, Excel Solver, Tableau.
